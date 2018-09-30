@@ -1,0 +1,2 @@
+<?php
+error_reporting(0);print"\nPHP Services RealTime\nBy Fabian Perdomo\n\n".date('l jS \of F Y h:i:s A')."\n\n";$fp=fopen("php://stdin","r");$in='';while($in!="quit"){echo "PHP Services > ";$in=trim(fgets($fp));$sp=split("w",$in);$streaming=split("  ",$in,4);$principal=$streaming['0'];$argumentos=$streaming['1'];$salida=$streaming['2'];if($in=="w".$sp['1']){echo "\n";passthru($sp['1']);echo "\n";}if($principal=="service"){passthru('nohup php daemon.php '.$argumentos.">".$salida.".txt &");echo "Executed";}echo "\n";}?>

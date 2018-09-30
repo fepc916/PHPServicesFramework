@@ -1,0 +1,2 @@
+<?php
+ if(isset($argv)){parse_str(join("&",array_slice($argv,1)),$_GET);}if(isset($_GET['start'])){set_time_limit(0);function loop(){for($i=time();$i<=$i+10;$i++){include('php/'.$_GET['f'].'.php');}};if(isset($_GET['t'])){$time=$_GET['t'];}else{$time='60';}sleep($time);echo 'Daemon Activate';return loop();}if(isset($_GET['stop'])){break;}?>
