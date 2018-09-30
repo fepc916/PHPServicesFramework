@@ -8,3 +8,6 @@ all services must be saved with short names within the PHP folder.
 #### The method of use is as follows:
 
 `PHP Services > services  start t=(interval of time) f=(filename of service without extension)  (name of file of log without extension)`
+
+
+#[Example of Use](https://nesstore.ga/v1/)
